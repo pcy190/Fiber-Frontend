@@ -53,9 +53,6 @@ export default class App extends Vue {}
     border-radius: 20px;
     transition: all 0.2s ease-in-out;
   }
-  .main-wrapper:hover{
-    transform: translate(0, -2px);
-  }
   #fiber-icon{
     margin-top: 80px;
   }
