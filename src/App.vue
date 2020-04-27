@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <task-bar></task-bar>
     <div class="main-wrapper">
-      <img alt="Vue logo" src="./assets/logo.png">
+      <task-bar></task-bar>
+    <img id="fiber-icon" src="@/assets/logo.png" width="150px" alt="fiber-icon">
+      <p class="fiber-title">Fiber</p>
+      <p class="fiber-subtitle">Advanced software protector</p>
     </div>
   </div>
 </template>
@@ -46,13 +48,25 @@ export default class App extends Vue {}
 }
   .main-wrapper{
     width: 100%;
-    height: 600px;
-    background: linear-gradient(to bottom right, rgba(37, 77, 93, 0.92), #44778a, #559cbc);
+    height: 655px;
+    background: linear-gradient(to bottom right, rgb(234, 81, 59), #f8af2a, #fdf13a);
     border-radius: 20px;
-    margin-top: 10px;
     transition: all 0.2s ease-in-out;
   }
   .main-wrapper:hover{
     transform: translate(0, -2px);
+  }
+  #fiber-icon{
+    margin-top: 80px;
+  }
+  .fiber-title{
+    font-size: 60px;
+    font-family: "Microsoft YaHei UI Light",sans-serif;
+    margin-top: 20px;
+  }
+  .fiber-subtitle{
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: "Microsoft YaHei UI Light",sans-serif;
   }
 </style>
