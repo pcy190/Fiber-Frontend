@@ -47,7 +47,7 @@ export default class App extends Vue {}
   .main-wrapper{
     width: 100%;
     height: 600px;
-    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(to bottom right, rgba(37, 77, 93, 0.92), #44778a, #559cbc);
     border-radius: 20px;
     margin-top: 10px;
     transition: all 0.2s ease-in-out;
