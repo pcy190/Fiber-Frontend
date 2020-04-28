@@ -9,6 +9,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText }
   from '@fortawesome/vue-fontawesome'
 
+
 library.add(fas, far, fab)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -22,3 +23,4 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+

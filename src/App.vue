@@ -28,6 +28,7 @@ export default class App extends Vue {}
   *{
     margin: 0;
     padding: 0;
+    user-select: none;
   }
   html body{
     overflow: scroll;

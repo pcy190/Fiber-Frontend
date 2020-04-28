@@ -1,10 +1,11 @@
 'use strict'
 
-import { app, protocol, BrowserWindow } from 'electron'
+import { app, protocol, BrowserWindow, ipcMain } from 'electron'
 import {
   createProtocol,
   /* installVueDevtools */
 } from 'vue-cli-plugin-electron-builder/lib'
+// import ipcMain = Electron.ipcMain;
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -45,6 +46,12 @@ function createWindow () {
   })
 }
 
+ipcMain.on('min', () => {
+  win.minimize();
+})
+ipcMain.on('quit', () => {
+  app.quit();
+})
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
   // On macOS it is common for applications and their menu bar
