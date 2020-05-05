@@ -6,27 +6,35 @@
         <div class="conf-wrapper">
             <ul>
                <li class="param-wrapper">
+                   Function1
                    <toggle-button :toggleid="getToggle1"></toggle-button>
                </li>
                <li class="param-wrapper">
+                   Function2
                    <toggle-button :toggleid="getToggle2"></toggle-button>
                </li>
                <li class="param-wrapper">
+                   Function3
                    <toggle-button :toggleid="getToggle3"></toggle-button>
                </li>
                <li class="param-wrapper">
+                   Function4
                    <toggle-button :toggleid="getToggle4"></toggle-button>
                </li>
                 <li class="param-wrapper">
+                    Function5
                     <toggle-button :toggleid="getToggle5"></toggle-button>
                 </li>
                 <li class="param-wrapper">
+                    Function6
                     <toggle-button :toggleid="getToggle6"></toggle-button>
                 </li>
                 <li class="param-wrapper">
+                    Function7
                     <toggle-button :toggleid="getToggle7"></toggle-button>
                 </li>
                 <li class="param-wrapper">
+                    Function8
                     <toggle-button :toggleid="getToggle8"></toggle-button>
                 </li>
             </ul>
@@ -75,6 +83,8 @@
 <style scoped>
     .conf-wrapper{
         display: block;
+        margin-left: 100px;
+        margin-top: 20px;
     }
     .conf-wrapper ul{
         position: relative;

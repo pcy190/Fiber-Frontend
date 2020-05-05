@@ -18,6 +18,10 @@
 </script>
 
 <style scoped>
+    .toggles{
+        position: relative;
+        display: inline-block;
+    }
     .toggles input.togglebtn {
         opacity: 0;
         position: relative;
