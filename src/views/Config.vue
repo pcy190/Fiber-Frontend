@@ -1,12 +1,20 @@
 <template>
     <div id="config">
-        Choose Protection Params
-        <div class="button" @click="goHome">
-            Back
+        <div class="title">
+            Choose Protection Params
         </div>
-        <div class="button">
-            Continue
-        </div>
+        <ul>
+            <li>
+                <div class="button" @click="goHome">
+                    Back
+                </div>
+            </li>
+            <li>
+                <div class="button">
+                    Continue
+                </div>
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -22,6 +30,16 @@
 </script>
 
 <style scoped>
+    .title{
+        position: relative;
+        font-family: "Microsoft YaHei UI Light",sans-serif;
+        color: black;
+        font-size: 36px;
+        text-align: center;
+        letter-spacing: -1px;
+        margin-top: 30px;
+
+    }
     .button{
         position: relative;
         width: 200px;

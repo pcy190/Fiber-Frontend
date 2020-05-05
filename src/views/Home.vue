@@ -3,9 +3,18 @@
     <img id="fiber-icon" src="@/assets/logo.png" width="150px" alt="fiber-icon">
     <p class="fiber-title">Fiber</p>
     <p class="fiber-subtitle">Advanced software protector</p>
-    <div class="button" @click="goConfig">
-      Start Protect
-    </div>
+    <ul class="button-wrapper">
+      <li>
+        <div class="button" @click="goConfig">
+          Start Protect
+        </div>
+      </li>
+      <li>
+        <div class="button" @click="goAbout">
+          About Fiber
+        </div>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -18,6 +27,9 @@ export default {
   methods: {
     goConfig: function () {
       this.$router.push('config')
+    },
+    goAbout: function () {
+      this.$router.push('about')
     }
   },
   components: {
@@ -26,6 +38,14 @@ export default {
 }
 </script>
 <style scoped>
+  .button-wrapper{
+    list-style: none;
+  }
+  .button-wrapper li{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .button{
     position: relative;
     width: 200px;
