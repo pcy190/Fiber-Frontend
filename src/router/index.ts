@@ -8,8 +8,15 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
+    meta: {index:0},
     component: Home
   },
+    {
+      path: '/config',
+      name: 'Config',
+      meta: {index:1},
+      component: () => import('../views/Config.vue')
+    },
   {
     path: '/about',
     name: 'About',
@@ -21,9 +28,9 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+	mode: 'history',
+	base: process.env.BASE_URL,
+	routes
 })
 
 export default router

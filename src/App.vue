@@ -1,29 +1,55 @@
+
 <template>
   <div id="app">
     <div class="main-wrapper">
       <task-bar></task-bar>
-    <img id="fiber-icon" src="@/assets/logo.png" width="150px" alt="fiber-icon">
-      <p class="fiber-title">Fiber</p>
-      <p class="fiber-subtitle">Advanced software protector</p>
+      <transition mode="out-in">
+        <router-view></router-view>
+      </transition>
     </div>
   </div>
 </template>
 
+
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
-import TaskBar from "@/components/TaskBar.vue";
+import { Component, Vue } from "vue-property-decorator";
+import HelloWorld from "./components/HelloWorld.vue";
+import TaskBar from "./components/TaskBar.vue";
+import Aside from "./components/Aside.vue";
+import HomePageView from "@/components/HomePageView.vue";
 
 @Component({
   components: {
     TaskBar,
-    HelloWorld,
-  },
+	HelloWorld,
+	// Aside,
+	// HomePageView,
+  }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+
+}
 </script>
 
 <style>
+  .v-enter{
+    opacity: 0;
+  }
+  .v-enter-active{
+    transition: 0.2s;
+  }
+  .v-enter-to{
+    opacity: 1;
+  }
+  .v-leave{
+    opacity: 1;
+  }
+  .v-leave-to{
+    opacity:0;
+  }
+  .v-leave-active{
+    transition: 0.2s;
+  }
   /*normalize*/
   *{
     margin: 0;
@@ -54,17 +80,5 @@ export default class App extends Vue {}
     border-radius: 20px;
     transition: all 0.2s ease-in-out;
   }
-  #fiber-icon{
-    margin-top: 80px;
-  }
-  .fiber-title{
-    font-size: 60px;
-    font-family: "Microsoft YaHei UI Light",sans-serif;
-    margin-top: 20px;
-  }
-  .fiber-subtitle{
-    font-size: 30px;
-    margin-top: 10px;
-    font-family: "Microsoft YaHei UI Light",sans-serif;
-  }
+
 </style>
