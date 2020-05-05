@@ -2,7 +2,9 @@
   <div id="app">
     <div class="main-wrapper">
       <task-bar></task-bar>
-      <router-view></router-view>
+      <transition mode="out-in">
+        <router-view></router-view>
+      </transition>
     </div>
   </div>
 </template>
@@ -18,10 +20,30 @@ import TaskBar from "@/components/TaskBar.vue";
     HelloWorld,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+
+}
 </script>
 
 <style>
+  .v-enter{
+    opacity: 0;
+  }
+  .v-enter-active{
+    transition: 0.2s;
+  }
+  .v-enter-to{
+    opacity: 1;
+  }
+  .v-leave{
+    opacity: 1;
+  }
+  .v-leave-to{
+    opacity:0;
+  }
+  .v-leave-active{
+    transition: 0.2s;
+  }
   /*normalize*/
   *{
     margin: 0;

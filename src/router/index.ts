@@ -8,11 +8,13 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
+    meta: {index:0},
     component: Home
   },
     {
       path: '/config',
       name: 'Config',
+      meta: {index:1},
       component: () => import('../views/Config.vue')
     },
   {
