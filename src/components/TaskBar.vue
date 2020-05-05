@@ -5,7 +5,7 @@
         </div>
         <div class="drag-zone"></div>
         <ul class="button-wrapper">
-            <li class="button button-green"></li>
+            <li class="button button-green" @click="goAbout"></li>
             <li class="button button-yellow" @click="minClick"></li>
             <li class="button button-red" @click="quitClick"></li>
         </ul>
@@ -22,6 +22,9 @@
             },
             quitClick: function () {
                 ipc.send('quit');
+            },
+            goAbout: function () {
+                this.$router.push('about');
             }
         }
     }

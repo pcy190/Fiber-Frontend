@@ -3,7 +3,35 @@
         <div class="title">
             Choose Protection Params
         </div>
-        <ul>
+        <div class="conf-wrapper">
+            <ul>
+               <li class="param-wrapper">
+                   <toggle-button :toggleid="getToggle1"></toggle-button>
+               </li>
+               <li class="param-wrapper">
+                   <toggle-button :toggleid="getToggle2"></toggle-button>
+               </li>
+               <li class="param-wrapper">
+                   <toggle-button :toggleid="getToggle3"></toggle-button>
+               </li>
+               <li class="param-wrapper">
+                   <toggle-button :toggleid="getToggle4"></toggle-button>
+               </li>
+                <li class="param-wrapper">
+                    <toggle-button :toggleid="getToggle5"></toggle-button>
+                </li>
+                <li class="param-wrapper">
+                    <toggle-button :toggleid="getToggle6"></toggle-button>
+                </li>
+                <li class="param-wrapper">
+                    <toggle-button :toggleid="getToggle7"></toggle-button>
+                </li>
+                <li class="param-wrapper">
+                    <toggle-button :toggleid="getToggle8"></toggle-button>
+                </li>
+            </ul>
+        </div>
+        <ul class="button-wrapper">
             <li>
                 <div class="button" @click="goHome">
                     Back
@@ -19,17 +47,52 @@
 </template>
 
 <script>
+    import ToggleButton from "../components/ToggleButton";
     export default {
+        components: {ToggleButton},
         methods:{
           goHome: function () {
             this.$router.go(-1);
           }
+        },
+        data(){
+            return {
+                getToggle1: 'toggle1',
+                getToggle2: 'toggle2',
+                getToggle3: 'toggle3',
+                getToggle4: 'toggle4',
+                getToggle5: 'toggle5',
+                getToggle6: 'toggle6',
+                getToggle7: 'toggle7',
+                getToggle8: 'toggle8',
+
+            }
         },
         name: "Config"
     }
 </script>
 
 <style scoped>
+    .conf-wrapper{
+        display: block;
+    }
+    .conf-wrapper ul{
+        position: relative;
+        list-style: none;
+        width: 600px;
+    }
+    .param-wrapper{
+        width: 300px;
+        display: inline-block;
+    }
+    .button-wrapper{
+        list-style: none;
+    }
+    .button-wrapper li {
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     .title{
         position: relative;
         font-family: "Microsoft YaHei UI Light",sans-serif;
