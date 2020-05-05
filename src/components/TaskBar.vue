@@ -33,8 +33,6 @@
     height: 40px;
     border-radius: 20px;
     -webkit-app-region: drag;
-    border-bottom: rgb(235, 101, 55) solid 0.5px;
-
 }
 .button-wrapper{
     float: right;

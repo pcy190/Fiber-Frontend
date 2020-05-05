@@ -1,7 +1,8 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img id="fiber-icon" src="@/assets/logo.png" width="150px" alt="fiber-icon">
+    <p class="fiber-title">Fiber</p>
+    <p class="fiber-subtitle">Advanced software protector</p>
   </div>
 </template>
 
@@ -16,3 +17,18 @@ export default {
   }
 }
 </script>
+<style scoped>
+  #fiber-icon{
+    margin-top: 80px;
+  }
+  .fiber-title{
+    font-size: 60px;
+    font-family: "Microsoft YaHei UI Light",sans-serif;
+    margin-top: 20px;
+  }
+  .fiber-subtitle{
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: "Microsoft YaHei UI Light",sans-serif;
+  }
+</style>

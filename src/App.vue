@@ -2,9 +2,7 @@
   <div id="app">
     <div class="main-wrapper">
       <task-bar></task-bar>
-    <img id="fiber-icon" src="@/assets/logo.png" width="150px" alt="fiber-icon">
-      <p class="fiber-title">Fiber</p>
-      <p class="fiber-subtitle">Advanced software protector</p>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -54,17 +52,5 @@ export default class App extends Vue {}
     border-radius: 20px;
     transition: all 0.2s ease-in-out;
   }
-  #fiber-icon{
-    margin-top: 80px;
-  }
-  .fiber-title{
-    font-size: 60px;
-    font-family: "Microsoft YaHei UI Light",sans-serif;
-    margin-top: 20px;
-  }
-  .fiber-subtitle{
-    font-size: 30px;
-    margin-top: 10px;
-    font-family: "Microsoft YaHei UI Light",sans-serif;
-  }
+
 </style>
